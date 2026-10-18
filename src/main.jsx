@@ -237,10 +237,6 @@ function Home() {
                   <p>{BUSINESS_ADDRESS}</p>
                 </div>
               </div>
-              <p className="contact-warning">
-                Before publishing this website, replace the placeholder contact
-                details with accurate business information.
-              </p>
             </div>
           </div>
         </section>
