@@ -41,6 +41,7 @@ function Footer() {
       <div className="footer-links">
         <Link to="/privacy">Privacy policy</Link>
         <Link to="/terms">Terms & conditions</Link>
+        <Link to="/delete-account">Delete account</Link>
       </div>
       <p className="legal">
         {brand} is a customer-facing brand operated by{" "}
@@ -246,22 +247,20 @@ function Home() {
   );
 }
 function PolicyLayout({ title, updated, children }) {
+  const isPrivacy = title === "Privacy Policy";
   return (
     <>
       <Header />
       <main className="policy">
         <Link to="/" className="back-link">
-          ← Back to Sprout
+          ← Back to website
         </Link>
-        <div className="section-kicker">YAMEEN TRADERS · SPROUT</div>
+        <div className="section-kicker">
+          {isPrivacy ? "YAMEEN TRADERS · SM MART" : "YAMEEN TRADERS · SPROUT"}
+        </div>
         <h1>{title}</h1>
         <p className="policy-updated">Last updated: {updated}</p>
         {children}
-        <div className="policy-notice">
-          <strong>Publication checklist:</strong> Review this draft carefully
-          and replace all placeholders with accurate business details before
-          making the site public.
-        </div>
       </main>
       <Footer />
     </>
@@ -269,67 +268,200 @@ function PolicyLayout({ title, updated, children }) {
 }
 function Privacy() {
   return (
-    <PolicyLayout title="Privacy Policy" updated="18 October 2026">
+    <PolicyLayout title="Privacy Policy" updated="28 October 2026">
       <p>
-        This Privacy Policy explains how <strong>Yameen Traders</strong> (“we”,
-        “us” or “our”), which operates the <strong>Sprout</strong> grocery
-        brand, may handle information when you visit our website or use our
-        services.
+        Yameen Traders (“we”, “us” or “our”) operates SM mart, a grocery shopping
+        application and related services. This Privacy Policy explains how we
+        collect, use, store, share and protect personal information when you use
+        SM mart.
       </p>
-      <h2>1. Information we may handle</h2>
+
+      <h2>1. Information We Collect</h2>
       <p>
-        Depending on the features you use, information may include contact
-        details you provide, delivery information, order details, and messages
-        sent to customer support. The exact information collected depends on the
-        service and app features in use.
+        Depending on the features you use, SM mart may collect or process the
+        following information:
       </p>
-      <h2>2. How information may be used</h2>
       <p>
-        Information may be used to respond to enquiries, process and deliver
-        orders, provide customer support, maintain service security, and meet
-        applicable legal obligations.
+        <strong>Phone number and authentication:</strong> Your mobile phone
+        number, including its country code, and authentication information
+        needed to verify your account through WhatsApp and maintain a secure
+        signed-in session. Verification codes are used to authenticate you.
       </p>
-      <h2>3. Sharing and service providers</h2>
       <p>
-        Information may be shared with service providers needed to operate the
-        service, such as hosting, authentication, communications or payment
-        providers, and where required by law. Update this section to accurately
-        reflect the providers and practices used by Sprout before publication.
+        <strong>Delivery address and location:</strong> The delivery address you
+        provide and the map coordinates associated with a location you select
+        or save using the map feature.
       </p>
-      <h2>4. Retention and security</h2>
       <p>
-        We aim to protect information using appropriate safeguards and retain it
-        only as needed for the purposes described or as required by law.
-        Specific retention periods depend on the type of information and legal
-        requirements.
+        <strong>Order information:</strong> Products ordered, quantities,
+        prices, order totals, order status and order history, including
+        information needed to manage Cash on Delivery (COD) orders, deliveries
+        and cancellations.
       </p>
-      <h2>5. Your choices and requests</h2>
       <p>
-        For questions about personal information or to request account deletion,
-        contact us using the verified contact details published on this website.
-        We may need to verify your identity before acting on a request.
+        <strong>Support and technical information:</strong> Information you send
+        to customer support and limited technical or diagnostic information
+        generated when you use the app or its supporting services.
       </p>
-      <h2>6. Children’s privacy</h2>
+
+      <h2>2. How We Use Your Information</h2>
+      <p>We may use information to:</p>
+      <ul>
+        <li>Create and authenticate your SM mart account and send WhatsApp verification codes.</li>
+        <li>Process, confirm, manage and deliver grocery orders.</li>
+        <li>Save and use delivery addresses and map coordinates for delivery.</li>
+        <li>Manage Cash on Delivery orders, cancellations and customer support.</li>
+        <li>Secure the service, troubleshoot issues, prevent misuse and comply with legal obligations.</li>
+      </ul>
+
+      <h2>3. Third-Party Services</h2>
       <p>
-        Our services are not intended to knowingly collect personal information
-        from children without appropriate permission where required by law.
+        SM mart uses Supabase for backend services, including authentication and
+        application data storage and management. We use Meta/WhatsApp services
+        to send account verification messages. These services may process
+        information needed to provide their respective functions, subject to
+        their own terms and privacy practices. We may also use hosting and
+        infrastructure providers to operate and maintain the service.
       </p>
-      <h2>7. Changes to this policy</h2>
       <p>
-        We may update this policy as our services change. The updated version
-        will be published on this page with a revised date.
+        We may disclose information when required by law, in response to lawful
+        requests, or where reasonably necessary to protect users, the service or
+        our legal rights. We do not claim that every provider receives every
+        category of information.
       </p>
-      <h2>8. Contact</h2>
+
+      <h2>4. Sharing of Information</h2>
+      <p>
+        We do not sell personal information. We share information only as
+        reasonably necessary to operate SM mart, including with service
+        providers supporting authentication, hosting and communications, and
+        with personnel who need relevant order and delivery details to fulfil
+        an order.
+      </p>
+
+      <h2>5. Delivery Location</h2>
+      <p>
+        When you choose a delivery location on a map, the address and associated
+        coordinates may be saved and used to deliver your order. Selecting a
+        location on a map does not, by itself, mean that SM mart continuously
+        tracks your device.
+      </p>
+
+      <h2>6. Data Security</h2>
+      <p>
+        We use appropriate technical and organisational safeguards intended to
+        protect personal information from unauthorised access, disclosure,
+        alteration, loss or misuse. No method of electronic transmission or
+        storage can be guaranteed to be completely secure.
+      </p>
+
+      <h2>7. Data Retention</h2>
+      <p>
+        We retain information for as long as reasonably necessary to provide
+        the service, manage accounts and orders, address disputes, maintain
+        security and meet applicable legal or accounting obligations. When an
+        account is deleted, we will delete or arrange deletion of associated
+        personal information, subject to information that must be retained for
+        legal compliance or other legitimate purposes.
+      </p>
+
+      <h2>8. Account Deletion and Privacy Requests</h2>
+      <p>
+        You can initiate account deletion through the account-deletion option
+        inside the SM mart app. If you cannot access the app, visit our{" "}
+        <Link to="/delete-account">account deletion request page</Link> or email{" "}
+        <a href={\`mailto:\${CONTACT_EMAIL}?subject=SM%20mart%20Account%20Deletion%20Request\`}>
+          {CONTACT_EMAIL}
+        </a>{" "}
+        with “SM mart Account Deletion Request” in the subject line. Please do
+        not send your password or one-time verification code. We may need to
+        verify your identity before processing a request.
+      </p>
+      <p>
+        We will process verified requests within a reasonable period, subject
+        to applicable legal requirements. Certain order or transaction records
+        may need to be retained where required by law or for legitimate purposes
+        such as resolving disputes or preventing fraud. You may also contact us
+        to ask questions about your information or request correction of
+        inaccurate information.
+      </p>
+
+      <h2>9. Children’s Privacy</h2>
+      <p>
+        SM mart is a general grocery shopping service and is not intended to
+        knowingly collect children’s personal information in circumstances
+        where parental permission or other safeguards are required by law. If
+        you believe a child has provided information inappropriately, contact
+        us so we can review the matter.
+      </p>
+
+      <h2>10. International Processing</h2>
+      <p>
+        Our service providers may process information in locations outside your
+        country or region. Where applicable, we will take steps required by law
+        to protect personal information during such processing.
+      </p>
+
+      <h2>11. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy as SM mart, our service providers or
+        legal obligations change. The latest version will be published on this
+        page with its updated date.
+      </p>
+
+      <h2>12. Contact Us</h2>
       <p>
         <strong>Yameen Traders</strong>
         <br />
-        Sprout Grocery
+        App: SM mart
         <br />
-        Email: {CONTACT_EMAIL}
+        Email: <a href={\`mailto:\${CONTACT_EMAIL}\`}>{CONTACT_EMAIL}</a>
         <br />
         Phone: {CONTACT_PHONE}
         <br />
-        Address: {BUSINESS_ADDRESS}
+        Address: 914 JC Road, Channapatna, Karnataka 562160, India
+      </p>
+    </PolicyLayout>
+  );
+}
+function DeleteAccount() {
+  return (
+    <PolicyLayout title="SM mart Account Deletion" updated="28 October 2026">
+      <p>
+        You can delete your SM mart account using the account-deletion option
+        inside the app. If you cannot access the app, you can request deletion
+        by contacting Yameen Traders using the email link below.
+      </p>
+      <h2>How to request deletion</h2>
+      <ol>
+        <li>Open your email application using the button below.</li>
+        <li>Use the subject “SM mart Account Deletion Request”.</li>
+        <li>Include the phone number associated with your SM mart account, including its country code, so we can identify the account. Do not include your password or OTP.</li>
+        <li>We may contact you to verify the request before processing it.</li>
+      </ol>
+      <p>
+        We will process verified requests within a reasonable period. Account
+        information will be deleted subject to applicable legal requirements
+        and records that must be retained for legitimate purposes, such as
+        legal compliance or dispute resolution.
+      </p>
+      <p>
+        <a
+          className="button button-primary"
+          href={\`mailto:\${CONTACT_EMAIL}?subject=SM%20mart%20Account%20Deletion%20Request\`}
+        >
+          Request account deletion <span>↗</span>
+        </a>
+      </p>
+      <h2>Contact</h2>
+      <p>
+        <strong>Yameen Traders</strong>
+        <br />
+        Email: <a href={\`mailto:\${CONTACT_EMAIL}\`}>{CONTACT_EMAIL}</a>
+        <br />
+        Phone: {CONTACT_PHONE}
+        <br />
+        Address: 914 JC Road, Channapatna, Karnataka 562160, India
       </p>
     </PolicyLayout>
   );
@@ -412,6 +544,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/delete-account" element={<DeleteAccount />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
