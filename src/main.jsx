@@ -4,7 +4,7 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import "./styles.css";
 
 const business = "Yameen Traders";
-const brand = "Sprout";
+const brand = "SM mart";
 
 const CONTACT_EMAIL = "syed.rehan123@gmail.com";
 const CONTACT_PHONE = "9686420464";
@@ -13,10 +13,10 @@ const BUSINESS_ADDRESS = "914 jc road channapatna 562160";
 function Header() {
   return (
     <header className="header">
-      <Link to="/" className="brand" aria-label="Sprout home">
+      <Link to="/" className="brand" aria-label="SM mart home">
         <span className="brand-mark">✳</span>
         <span>
-          sprout<span className="brand-dot">.</span>
+          SM mart<span className="brand-dot">.</span>
           <small>GROCERY, MADE SIMPLE</small>
         </span>
       </Link>
@@ -34,7 +34,7 @@ function Footer() {
     <footer className="footer">
       <div>
         <Link to="/" className="footer-brand">
-          sprout.
+          SM mart.
         </Link>
         <p>Everyday groceries, with care.</p>
       </div>
@@ -69,7 +69,7 @@ function Home() {
               <em>Good days.</em>
             </h1>
             <p className="hero-text">
-              Welcome to Sprout, a grocery brand operated by Yameen Traders.
+              Welcome to SM mart, a grocery brand operated by Yameen Traders.
               We’re building a simpler way for customers to shop for everyday
               grocery essentials.
             </p>
@@ -114,7 +114,7 @@ function Home() {
             <span className="strip-icon">✳</span>
             <span>
               <strong>Our brand</strong>
-              <small>Sprout Grocery</small>
+              <small>SM mart Grocery</small>
             </span>
           </div>
           <div>
@@ -142,7 +142,7 @@ function Home() {
             </h2>
             <div>
               <p>
-                <strong>Sprout</strong> is the grocery brand operated by{" "}
+                <strong>SM mart</strong> is the grocery brand operated by{" "}
                 <strong>Yameen Traders</strong>, a GST-registered sole
                 proprietorship. Our aim is to make grocery shopping convenient
                 and straightforward for customers.
@@ -192,12 +192,12 @@ function Home() {
               <em>A fresh new name.</em>
             </h2>
             <p>
-              Sprout is the customer-facing brand. The business behind it is
+              SM mart is the customer-facing brand. The business behind it is
               Yameen Traders.
             </p>
           </div>
           <div className="band-stamp">
-            SPROUT
+            SM MART
             <br />
             <span>BY YAMEEN TRADERS</span>
           </div>
@@ -212,7 +212,7 @@ function Home() {
                 <em>groceries.</em>
               </h2>
               <p>
-                For questions about Sprout or our services, please contact
+                For questions about SM mart or our services, please contact
                 Yameen Traders using the business details below.
               </p>
             </div>
@@ -256,7 +256,7 @@ function PolicyLayout({ title, updated, children }) {
           ← Back to website
         </Link>
         <div className="section-kicker">
-          {isPrivacy ? "YAMEEN TRADERS · SM MART" : "YAMEEN TRADERS · SPROUT"}
+          {isPrivacy ? "YAMEEN TRADERS · SM MART" : "YAMEEN TRADERS · SM MART"}
         </div>
         <h1>{title}</h1>
         <p className="policy-updated">Last updated: {updated}</p>
@@ -470,13 +470,13 @@ function Terms() {
   return (
     <PolicyLayout title="Terms & Conditions" updated="18 October 2026">
       <p>
-        These Terms & Conditions apply to the Sprout grocery brand operated by{" "}
+        These Terms & Conditions apply to the SM mart grocery brand operated by{" "}
         <strong>Yameen Traders</strong>. By accessing the website or using our
         services, you agree to these terms, as applicable.
       </p>
       <h2>1. Services</h2>
       <p>
-        Sprout provides information about our grocery brand and may support
+        SM mart provides information about our grocery brand and may support
         grocery ordering and related services through our app or other channels.
         Availability, product range and service areas may change.
       </p>
