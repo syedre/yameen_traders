@@ -1,6 +1,6 @@
-# Sprout Grocery — Yameen Traders
+# SM mart Grocery — Yameen Traders
 
-A responsive React + Vite website for the Sprout grocery brand, operated by Yameen Traders. Includes Home, Privacy Policy, and Terms & Conditions pages, and is suitable for deployment on Vercel.
+A responsive React + Vite website for the SM mart grocery brand, operated by Yameen Traders. Includes Home, Privacy Policy, and Terms & Conditions pages, and is suitable for deployment on Vercel.
 
 ## Before publishing
 
