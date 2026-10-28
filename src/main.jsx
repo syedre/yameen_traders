@@ -370,7 +370,7 @@ function Privacy() {
         You can initiate account deletion through the account-deletion option
         inside the SM mart app. If you cannot access the app, visit our{" "}
         <Link to="/delete-account">account deletion request page</Link> or email{" "}
-        <a href={\`mailto:\${CONTACT_EMAIL}?subject=SM%20mart%20Account%20Deletion%20Request\`}>
+        <a href={`mailto:${CONTACT_EMAIL}?subject=SM%20mart%20Account%20Deletion%20Request`}>
           {CONTACT_EMAIL}
         </a>{" "}
         with “SM mart Account Deletion Request” in the subject line. Please do
@@ -415,7 +415,7 @@ function Privacy() {
         <br />
         App: SM mart
         <br />
-        Email: <a href={\`mailto:\${CONTACT_EMAIL}\`}>{CONTACT_EMAIL}</a>
+        Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
         <br />
         Phone: {CONTACT_PHONE}
         <br />
@@ -448,7 +448,7 @@ function DeleteAccount() {
       <p>
         <a
           className="button button-primary"
-          href={\`mailto:\${CONTACT_EMAIL}?subject=SM%20mart%20Account%20Deletion%20Request\`}
+          href={`mailto:${CONTACT_EMAIL}?subject=SM%20mart%20Account%20Deletion%20Request`}
         >
           Request account deletion <span>↗</span>
         </a>
@@ -457,7 +457,7 @@ function DeleteAccount() {
       <p>
         <strong>Yameen Traders</strong>
         <br />
-        Email: <a href={\`mailto:\${CONTACT_EMAIL}\`}>{CONTACT_EMAIL}</a>
+        Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
         <br />
         Phone: {CONTACT_PHONE}
         <br />
