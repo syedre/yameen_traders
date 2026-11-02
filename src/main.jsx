@@ -15,10 +15,6 @@ function Header() {
     <header className="header">
       <Link to="/" className="brand" aria-label="SM mart home">
         <img className="brand-logo" src="https://jabzndbdybeeugoypboz.supabase.co/storage/v1/object/public/royalwood/banners/logo_transparent.png" alt="SM mart logo" />
-        <span>
-          SM mart<span className="brand-dot">.</span>
-          <small>GROCERY, MADE SIMPLE</small>
-        </span>
       </Link>
       <nav>
         <a href="/#about">About</a>
