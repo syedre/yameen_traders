@@ -18,7 +18,7 @@ function Header() {
       </Link>
       <nav>
         <a href="/#about">About</a>
-        <a href="/#contact">Contact</a>
+        <Link to="/contact">Contact</Link>
         <Link to="/privacy">Privacy</Link>
         <Link to="/terms">Terms</Link>
       </nav>
@@ -242,6 +242,54 @@ function Home() {
     </>
   );
 }
+function Contact() {
+  return (
+    <>
+      <Header />
+      <main className="section contact">
+        <div className="section-kicker">WE’RE HERE TO HELP</div>
+        <div className="contact-grid">
+          <div>
+            <h2>
+              Let’s talk
+              <br />
+              <em>groceries.</em>
+            </h2>
+            <p>
+              For questions about SM mart or our services, please contact
+              Yameen Traders using the business details below.
+            </p>
+          </div>
+          <div className="contact-card">
+            <div className="contact-row">
+              <span className="contact-icon">✉</span>
+              <div>
+                <small>EMAIL</small>
+                <p><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+              </div>
+            </div>
+            <div className="contact-row">
+              <span className="contact-icon">☎</span>
+              <div>
+                <small>PHONE</small>
+                <p><a href={`tel:${CONTACT_PHONE}`}>{CONTACT_PHONE}</a></p>
+              </div>
+            </div>
+            <div className="contact-row">
+              <span className="contact-icon">⌖</span>
+              <div>
+                <small>BUSINESS ADDRESS</small>
+                <p>{BUSINESS_ADDRESS}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
 function PolicyLayout({ title, updated, children }) {
   const isPrivacy = title === "Privacy Policy";
   return (
@@ -539,6 +587,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/delete-account" element={<DeleteAccount />} />
         <Route path="/terms" element={<Terms />} />
