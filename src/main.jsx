@@ -8,7 +8,7 @@ const brand = "SM mart";
 
 const CONTACT_EMAIL = "syed.rehan123@gmail.com";
 const CONTACT_PHONE = "9686420464";
-const BUSINESS_ADDRESS = "914 jc road channapatna 562160";
+const BUSINESS_ADDRESS = "No 38 APMC Channapatna";
 
 function Header() {
   return (
@@ -463,7 +463,7 @@ function Privacy() {
         <br />
         Phone: {CONTACT_PHONE}
         <br />
-        Address: 914 JC Road, Channapatna, Karnataka 562160, India
+        Address: {BUSINESS_ADDRESS}
       </p>
     </PolicyLayout>
   );
