@@ -300,7 +300,7 @@ function PolicyLayout({ title, updated, children }) {
           ← Back to website
         </Link>
         <div className="section-kicker">
-          {isPrivacy ? "{business.toUpperCase()} · SM MART" : "{business.toUpperCase()} · SM MART"}
+          {business.toUpperCase()} · SM MART
         </div>
         <h1>{title}</h1>
         <p className="policy-updated">Last updated: {updated}</p>
