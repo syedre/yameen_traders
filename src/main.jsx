@@ -505,7 +505,7 @@ function DeleteAccount() {
         <br />
         Phone: {CONTACT_PHONE}
         <br />
-        Address: 914 JC Road, Channapatna, Karnataka 562160, India
+        Address: {BUSINESS_ADDRESS}
       </p>
     </PolicyLayout>
   );
