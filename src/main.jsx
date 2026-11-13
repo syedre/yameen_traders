@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import "./styles.css";
 
-const business = "Yameen Traders";
+const business = "SYED REHAN AHMED";
 const brand = "SM mart";
 
 const CONTACT_EMAIL = "syed.rehan123@gmail.com";
@@ -65,7 +65,7 @@ function Home() {
               <em>Good days.</em>
             </h1>
             <p className="hero-text">
-              Welcome to SM mart, a grocery brand operated by Yameen Traders.
+              Welcome to SM mart, a grocery brand operated by {business}.
               We’re building a simpler way for customers to shop for everyday
               grocery essentials.
             </p>
@@ -81,7 +81,7 @@ function Home() {
               <span className="note-icon">✓</span>
               <span>
                 <strong>Local business. Customer-first service.</strong>
-                <small>Operated by Yameen Traders</small>
+                <small>Operated by {business}</small>
               </span>
             </div>
           </div>
@@ -117,7 +117,7 @@ function Home() {
             <span className="strip-icon">⌂</span>
             <span>
               <strong>Operated by</strong>
-              <small>Yameen Traders</small>
+              <small>{business}</small>
             </span>
           </div>
           <div>
@@ -139,7 +139,7 @@ function Home() {
             <div>
               <p>
                 <strong>SM mart</strong> is the grocery brand operated by{" "}
-                <strong>Yameen Traders</strong>, a GST-registered sole
+                <strong>{business}</strong>, a GST-registered sole
                 proprietorship. Our aim is to make grocery shopping convenient
                 and straightforward for customers.
               </p>
@@ -189,13 +189,13 @@ function Home() {
             </h2>
             <p>
               SM mart is the customer-facing brand. The business behind it is
-              Yameen Traders.
+              {business}.
             </p>
           </div>
           <div className="band-stamp">
             SM MART
             <br />
-            <span>BY YAMEEN TRADERS</span>
+            <span>BY {business.toUpperCase()}</span>
           </div>
         </section>
         <section id="contact" className="section contact">
@@ -209,7 +209,7 @@ function Home() {
               </h2>
               <p>
                 For questions about SM mart or our services, please contact
-                Yameen Traders using the business details below.
+                {business} using the business details below.
               </p>
             </div>
             <div className="contact-card">
@@ -257,7 +257,7 @@ function Contact() {
             </h2>
             <p>
               For questions about SM mart or our services, please contact
-              Yameen Traders using the business details below.
+              {business} using the business details below.
             </p>
           </div>
           <div className="contact-card">
@@ -300,7 +300,7 @@ function PolicyLayout({ title, updated, children }) {
           ← Back to website
         </Link>
         <div className="section-kicker">
-          {isPrivacy ? "YAMEEN TRADERS · SM MART" : "YAMEEN TRADERS · SM MART"}
+          {isPrivacy ? "{business.toUpperCase()} · SM MART" : "{business.toUpperCase()} · SM MART"}
         </div>
         <h1>{title}</h1>
         <p className="policy-updated">Last updated: {updated}</p>
@@ -314,7 +314,7 @@ function Privacy() {
   return (
     <PolicyLayout title="Privacy Policy" updated="28 October 2026">
       <p>
-        Yameen Traders (“we”, “us” or “our”) operates SM mart, a grocery shopping
+        {business} (“we”, “us” or “our”) operates SM mart, a grocery shopping
         application and related services. This Privacy Policy explains how we
         collect, use, store, share and protect personal information when you use
         SM mart.
@@ -455,7 +455,7 @@ function Privacy() {
 
       <h2>12. Contact Us</h2>
       <p>
-        <strong>Yameen Traders</strong>
+        <strong>{business}</strong>
         <br />
         App: SM mart
         <br />
@@ -474,7 +474,7 @@ function DeleteAccount() {
       <p>
         You can delete your SM mart account using the account-deletion option
         inside the app. If you cannot access the app, you can request deletion
-        by contacting Yameen Traders using the email link below.
+        by contacting {business} using the email link below.
       </p>
       <h2>How to request deletion</h2>
       <ol>
@@ -499,7 +499,7 @@ function DeleteAccount() {
       </p>
       <h2>Contact</h2>
       <p>
-        <strong>Yameen Traders</strong>
+        <strong>{business}</strong>
         <br />
         Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
         <br />
@@ -515,7 +515,7 @@ function Terms() {
     <PolicyLayout title="Terms & Conditions" updated="18 October 2026">
       <p>
         These Terms & Conditions apply to the SM mart grocery brand operated by{" "}
-        <strong>Yameen Traders</strong>. By accessing the website or using our
+        <strong>{business}</strong>. By accessing the website or using our
         services, you agree to these terms, as applicable.
       </p>
       <h2>1. Services</h2>
@@ -555,7 +555,7 @@ function Terms() {
       </p>
       <h2>7. Contact</h2>
       <p>
-        For questions about these terms, contact <strong>Yameen Traders</strong>{" "}
+        For questions about these terms, contact <strong>{business}</strong>{" "}
         using the verified business contact details below.
         <br />
         Email: {CONTACT_EMAIL}
